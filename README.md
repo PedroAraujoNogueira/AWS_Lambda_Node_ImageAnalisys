@@ -6,8 +6,8 @@
 -> Escolha a opção "Create 'app-image-analisys' app in '...' org" para criar um novo projeto chamado app-image-analisys.  
 -> Digite no terminal npm i para instalar as dependecias do projeto.  
 -> Digite "sls deploy" para fazer deploy da sua aplicação.  
--> Digite "sls invoke local -f img-analysis --log" para invocar sua função localmente
-ou "sls invoke -f img-analysis --log" para invocar sua função na nuvem.  
+-> Digite "sls invoke local -f img-analysis --path request.json" para invocar sua função localmente
+ou "sls invoke -f img-analysis --path request.json --log" para invocar sua função na nuvem.  
 -> Pegue o endpoint gerado ao fazer deploy e acrescente a ele o query parameter imageUrl com o link de alguma imagem.  
 
 ### Descrição do projeto:  

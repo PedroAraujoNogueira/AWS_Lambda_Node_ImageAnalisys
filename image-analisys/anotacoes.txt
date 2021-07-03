@@ -1,0 +1,27 @@
+1. Inicializar um projeto serverless.
+sls ou serverless
+
+2. "npm init -y", para iniciar um projeto em node.
+
+3. npm i sls, para instalar o serverless framework. 
+
+4. npm i aws-sdk, a biblioteca da aws.
+
+5. Sempre fazer deploy antes de tudo para verificar se o ambiente está ok.
+sls deploy
+
+6. invoke local para saber se tudo está funcionando localmente.
+sls invoke local -f img-analysis --log
+
+7. Adicionar permissões no serverless.yaml para podermos usar os serviços de 
+rekognition e translate através da nossa função lambda.
+
+8. Fazer deploy novamente.
+sls deploy
+
+9. invoke na AWS; Esse comando vai lá na AWS e vai chamar nossa função.
+sls invoke -f img-analysis --log
+
+10. instalar o axios, que é uma biblioteca para fazermos download ou requisições
+para outras APIs.
+npm i axios

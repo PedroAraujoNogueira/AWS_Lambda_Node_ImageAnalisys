@@ -1,0 +1,20 @@
+1. instalar globalmente a biblioteca do serverless.
+npm i -g serverless
+
+2. inicializar um projeto serverless.
+sls ou serverless
+
+3. Sempre fazer deploy antes de tudo para verificar se o ambiente está ok.
+sls deploy
+
+4. invoke na AWS; Esse comando vai lá na AWS e vai chamar nossa função.
+sls invoke -f hello
+
+5. invoke local
+sls invoke local -f hello --log
+
+6. capturar logs 
+sls logs -f hello -t
+
+7. remover tudo que foi criado
+sls remove

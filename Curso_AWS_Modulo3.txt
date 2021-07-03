@@ -1,0 +1,70 @@
+Modulo3: 
+
+# Introdução ao capítulo:
+
+1. Nesse capítulo vamos aprender como trabalhar com aplicações serveless e porque 
+é tao especial aplicações serveless.
+2. Vamos trabalhar com a linha de comando e com a interface da AWS para entender 
+as diferenças.
+3. Criar nossa primeira aplicação usando um serviço da AWS.
+
+# Introdução à aplicações serveless:
+
+1. Aplicações Serveless foram criadas com o objetivo de evitar que gastemos tempo e dinheiro 
+em máquinas que não são usadas. Ou seja, nosso objetivo é receber um evento, processá-lo e em 
+seguida liberarmos recursos. Podemos chamar isso de programação orientada a eventos.
+2. Podemos capturar esses eventos de diversas formas como por exemplo: 
+- Através da chamada de algum dos métodos Http.
+- Através do uso de um cron job(rotinas).
+- Através do recebimentos de email.
+- Para rotinas de Logs.
+- Caso alguma alteração no banco de dados seja feita.
+- Etc... 
+
+# Minha primeira aplicação serverless na AWS via interface:
+
+1. Procure o serviço de lambda. O lambda é um serviço para rodar nossas aplicações sem ter um 
+servidor dedicado de fato. Nós escrevemos um bloco de código, fazemos um upload desse código para
+dentro da AWS e então quando acontecer um determinado evento a AWS vai levantar uma instância do 
+nosso código e após terminado a execução do código a instância é "morta".   
+2. Clique em Criar Função.
+3. Coloque um nome para sua função e clique em Criar Função.
+4. Escolha um trigger(gatilho) para que sua função seja chamada. No nosso caso escolheremos uma Api 
+Gateway como trigger porém poderia ser uma mudança em um arquivo, uma alteração no banco de dados e etc.
+5. Crie uma Api Rest, coloque a segurança como "open" e clique em add.
+6. Copie e cole o endpoint da APi em uma janela e veja o resultado. Altere a função padrão e salve(deploy) 
+ela para ver a mudança ao tentar acessar o endpoint novamente.
+exports.handler = async (event) => {
+    // TODO implement
+    try {
+        const { num1, num2 } = event.queryStringParameters
+        const response = {
+            statusCode: 200,
+            body: `A soma é ${parseInt(num1) + parseInt(num2)}`,
+        };
+        return response;
+    } catch (e) {
+        return {
+            statusCode: 500,
+            body: "Lembrou de colocar os query parameters num1 e num2?"
+        }
+    }
+};
+
+# Minha primeira aplicação serverless na AWS sem frameworks:
+
+1. Ver anotações em demo01. 
+
+# Introdução ao Serverless Framework:
+
+1. O Serverless Framework ele é um framework criado para trabalhar com multi-nuven, porém ele funciona 
+melhor com os serviços da AWS.
+
+2. Ver anotações em demo02.
+
+# Criando uma API para analisar imagens com AWS Recognition. 
+
+
+
+
+

@@ -1,7 +1,8 @@
 # API para analisar imagens.  
 ### Como executar o projeto: 
 -> Vá até a pasta image-analysis, as outras duas pastas são apenas exemplos mais simples usados para um aprendizado inicial.   
--> Digite no terminal "sls" ou "serverless" para inicializar um projeto serverless.
+-> Digite "npm i -g serverless" para instalar globalmente a biblioteca do serverless.  
+-> Digite no terminal "sls" ou "serverless" para inicializar um projeto serverless.  
 -> Escolha a opção "Create 'app-image-analisys' app in '...' org" para criar um novo projeto chamado app-image-analisys.  
 -> Digite no terminal npm i para instalar as dependecias do projeto.  
 -> Digite "sls deploy" para fazer deploy da sua aplicação.  
